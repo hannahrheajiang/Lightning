@@ -10,17 +10,18 @@ void setup()
   strokeWeight(4); //adjusts width of each bolt
   background(0); //adjusts background color
 }
-
 void draw()
 {
-  //Make lighting segments draw, use random positions
-  endX = startX + (int)(Math.random())*10;
-  endY = startY + (int)(Math.random()*19)-9;
-  line(startX,startY,endX,endY);
-  startX = endX;
-  startY = endY;
+  // Create a bolt of randoom color that moves randomly across screen
+  stroke((int)(Math.random()*256), (int)(Math.random()*256),(int)(Math.random()*256));
+  while (endX<300){
+    endX = startX + (int)(Math.random()*10);
+    endY = startY + (int)(Math.random()*19)-9;
+    line(startX,startY,endX,endY);
+    startX = endX;
+    startY = endY;
+  }
 }
-
 void mousePressed()
 {
   //set values equal to original values
