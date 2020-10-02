@@ -1,22 +1,26 @@
 // create variables
-int startX = 0;
-int startY = 150;
-int endX = 0;
-int endY = 150;
+int startX = 350;
+int startY = 0;
+int endX = 350;
+int endY = 0;
+
 
 void setup()
 {
-  size(300,300);
-  strokeWeight(4); //adjusts width of each bolt
-  background(0); //adjusts background color
+  size(700,700);
+  background(0);
 }
+  
 void draw()
 {
-  // Create a bolt of randoom color that moves randomly across screen
-  stroke((int)(Math.random()*256), (int)(Math.random()*256),(int)(Math.random()*256));
-  while (endX<300){
-    endX = startX + (int)(Math.random()*10);
-    endY = startY + (int)(Math.random()*19)-9;
+  //replace background
+  background(0);
+  // Create a bolt of random yellow color that moves randomly across screen
+  strokeWeight((int)(Math.random()*5)+3); //adjusts width of each bolt
+  stroke((int)(Math.random()*5)+260, (int)(Math.random()*50)+215,10,(int)(Math.random()*65)+200);
+  while (endY<700){
+    endY = startY + (int)(Math.random()*10);
+    endX = startX + (int)(Math.random()*19)-9;
     line(startX,startY,endX,endY);
     startX = endX;
     startY = endY;
@@ -25,9 +29,9 @@ void draw()
 void mousePressed()
 {
   //set values equal to original values
-  startX = 0;
-  startY = 150;
-  endX = 0;
-  endY = 150;
+  startX = 350;
+  startY = 0;
+  endX = 350;
+  endY = 0;
 
 }
