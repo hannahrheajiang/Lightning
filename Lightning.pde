@@ -17,7 +17,7 @@ void draw()
   background(0);
   // Create a bolt of random yellow color that moves randomly across screen
   strokeWeight((int)(Math.random()*5)+3); //adjusts width of each bolt
-  stroke((int)(Math.random()*5)+260, (int)(Math.random()*50)+215,10,(int)(Math.random()*65)+200);
+  stroke((int)(Math.random()*10)+255, (int)(Math.random()*60)+205,(int)(Math.random()*10),(int)(Math.random()*65)+200);
   while (endY<700){
     endY = startY + (int)(Math.random()*10);
     endX = startX + (int)(Math.random()*19)-9;
